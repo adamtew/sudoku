@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+<style>
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.root {
+  background: #d3d3d3;
+  min-height: 100vh;
+}
+
+.menu {
+  padding: 20px;
+  background-color: #212121;
+  color: white;
+}
+
+.solve-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.solved {
+  display: inline-block;
+  margin: 0 40px;
+  font-size: 30px;
+}
+
+.solve-button {
+  border: none;
+  padding: 5px;
+}
+
+.solve-button:hover {
+  background: rgba(255, 255, 255, .80);
+}
+
+.tile:hover {
+  //background: rgba(0, 0, 0, .5);
+  //border: none;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.tile {
+  float: left;
+  background: white;
+  border: 1px solid #e3e3e3;
+  padding: 15px;
+  margin: 0px;
+  width: 10px;
+  height: 10px
+}
+
+.tile-container:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+  padding: 15px 0;
+  font-size: 25px;
+}
+
+.tiles-container {
+  margin: 0 0 50px 0;
+  color: #666;
+  box-shadow: 3px 3px 15px gray;
+}
+</style>
+</head>
+<body>
+
+<div class="root" id="root"></div>
+<script src="./Solver.js"></script>
+<script src="./index.js" type="text/babel"></script>
+
+</body>
+</html>
